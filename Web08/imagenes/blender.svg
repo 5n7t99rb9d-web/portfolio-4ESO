@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Ilustración provisional BLENDER">
+      <rect width="800" height="520" fill="#2c2259"/>
+      <circle cx="717" cy="47" r="172" fill="#f3a7ff" opacity=".13"/><circle cx="66" cy="455" r="190" fill="#9feaff" opacity=".12"/>
+      <g><path d="M395 89 L603 209 L395 330 L187 209Z" fill="#9786ef"/><path d="M187 209 L395 330 L395 420 L187 299Z" fill="#49349b"/><path d="M395 330 L603 209 L603 299 L395 420Z" fill="#7355c9"/><path d="M292 148 L385 95 L478 148 L385 201Z" fill="#ffd699"/><path d="M292 148 L385 201 L385 303 L292 248Z" fill="#e58b88"/><path d="M385 201 L478 148 L478 248 L385 303Z" fill="#ffb3a1"/><circle cx="202" cy="159" r="30" fill="#84dbff"/><path d="M550 130L588 152L550 173L513 152Z" fill="#a4f7c1"/></g>
+      <rect x="30" y="26" width="215" height="39" rx="19" fill="#f3a7ff"/>
+      <text x="48" y="52" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#2c2259">BLENDER</text>
+      <rect x="30" y="437" width="740" height="57" rx="12" fill="#050615" opacity=".62"/>
+      <text x="50" y="473" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#fff">TU ESCENA 3D · SUSTITUYE ESTA IMAGEN</text>
+    </svg>

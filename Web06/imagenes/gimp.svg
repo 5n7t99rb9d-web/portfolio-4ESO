@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Ilustración provisional GIMP">
+      <rect width="800" height="520" fill="#314b45"/>
+      <circle cx="717" cy="47" r="172" fill="#b5ff9b" opacity=".13"/><circle cx="66" cy="455" r="190" fill="#e7fbd1" opacity=".12"/>
+      <g><rect x="92" y="105" width="310" height="310" rx="28" fill="#6d8a6c"/><rect x="365" y="85" width="320" height="330" rx="28" fill="#bad4a0"/><circle cx="260" cy="225" r="78" fill="#f8cc80"/><path d="M97 352 L215 248 L288 304 L396 212 L396 410 L97 410Z" fill="#24463d"/><path d="M368 358 L473 221 L530 285 L614 175 L682 283 L682 413 L368 413Z" fill="#416c56"/><circle cx="585" cy="177" r="39" fill="#ffe08c"/><path d="M377 94 L377 403" stroke="#f8f1d4" stroke-width="6" stroke-dasharray="8 10"/></g>
+      <rect x="30" y="26" width="215" height="39" rx="19" fill="#b5ff9b"/>
+      <text x="48" y="52" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#314b45">GIMP</text>
+      <rect x="30" y="437" width="740" height="57" rx="12" fill="#050615" opacity=".62"/>
+      <text x="50" y="473" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#fff">TU IMAGEN EDITADA · SUSTITUYE ESTA IMAGEN</text>
+    </svg>

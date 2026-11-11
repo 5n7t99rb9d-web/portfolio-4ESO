@@ -1,0 +1,280 @@
+/* ============================================================
+   MI WEB 2.0 — EDICIÓN NEÓN
+   GUÍA PARA PERSONALIZAR TU PRIMERA WEB
+   ============================================================
+
+   ¿QUÉ ES ESTO?
+   Tu HTML indica QUÉ hay en la página: títulos, párrafos,
+   enlaces e imágenes. Este archivo CSS decide CÓMO se ven.
+   El mismo archivo sirve para todas las páginas HTML.
+
+   ¿CÓMO EMPIEZO?
+   1. Usa este archivo tal cual: ¡ya tienes una web renovada!
+   2. Si quieres personalizarla, empieza por el BLOQUE 1.
+   3. Guarda los cambios y actualiza la página del navegador.
+   4. Cambia UNA SOLA COSA cada vez para ver lo que ocurre.
+
+   IMPORTANTE PARA NO ESTROPEARLO:
+   - Cambia solo los VALORES recomendados en cada bloque.
+   - Deja las llaves { }, los dos puntos : y los puntos y coma ;
+     exactamente donde están.
+   - No borres nombres como 'color', 'font-size' o 'background'.
+   - Puedes deshacer con Ctrl+Z, o recuperar este archivo.
+   - Los párrafos de comentarios (como este) son para leer:
+     el navegador los ignora y no salen en tu web.
+
+   MINI DICCIONARIO:
+   - #38bdf8 : un color (copialo entero, incluido el #).
+   - px      : píxeles; sirve para tamaños y distancias.
+   - %       : porcentaje.
+   - hover   : cuando el ratón pasa sobre un elemento.
+   - h1, h2  : títulos que ya usas en HTML.
+   - p       : párrafos.
+   - a       : enlaces.
+   - img     : imágenes.
+   ============================================================ */
+
+/* ============================================================
+   1. LOS COLORES DE MI WEB                     NIVEL: MUY FÁCIL
+
+   ¡EMPIEZA AQUÍ! Estos cinco colores se utilizan en distintos
+   lugares de la web. Cambia solo lo que aparece tras los ':' .
+   Prueba, por ejemplo:
+     --violeta: #ffcc00;    (amarillo)
+     --azul:    #00ffbb;    (verde turquesa)
+     --rosa:    #ff3366;    (rosa intenso)
+   Recuerda conservar el ';' final y el símbolo # del color.
+   ============================================================ */
+:root {
+    --fondo: #090b21;
+    --violeta: #a78bfa;
+    --azul: #38bdf8;
+    --rosa: #fb7185;
+    --letra: #f1f5ff;
+}
+
+/* ============================================================
+   2. EL FONDO DE LA PÁGINA                    NIVEL: FÁCIL
+
+   El fondo oscuro y tres manchas de luz se dibujan SIN imágenes.
+   PERSONALIZA: cambia '--fondo' en el bloque 1. Por ejemplo,
+   usa #001b2e para un fondo azul marino o #19001f para morado.
+   NO ES NECESARIO TOCAR: las líneas 'radial-gradient(...)'.
+   Esas líneas crean las luces y son un poco más avanzadas.
+   ============================================================ */
+html {
+    min-height: 100%;
+    background-color: var(--fondo);
+    background-image:
+        radial-gradient(circle at 12% 12%, #6639bd66, transparent 36%),
+        radial-gradient(circle at 92% 24%, #087aaa55, transparent 32%),
+        radial-gradient(circle at 50% 100%, #c0267540, transparent 38%);
+    background-attachment: fixed;
+}
+
+/* ============================================================
+   3. LA TARJETA QUE CONTIENE TODO             NIVEL: FÁCIL
+
+   'body' contiene lo que se ve en la página. Lo presentamos
+   como una gran tarjeta centrada con bordes y sombra.
+   PRUEBAS SEGURAS:
+   - 'max-width: 900px;' -> prueba 700px (más estrecha).
+   - 'font-size: 18px;'  -> prueba 22px (letras más grandes).
+   - 'border-radius: 28px;' -> prueba 0px (esquinas cuadradas).
+   Las otras líneas producen el efecto cristal: déjalas igual.
+   ============================================================ */
+body {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 900px;
+    min-height: calc(100vh - 64px);
+    margin: 32px auto;
+    padding: clamp(24px, 6vw, 64px);
+    color: var(--letra);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    background: linear-gradient(145deg, #151936ee, #10142bdf);
+    border: 1px solid #a5b4fc55;
+    border-radius: 28px;
+    box-shadow: 0 30px 100px #0008, inset 0 1px #ffffff22;
+    backdrop-filter: blur(15px);
+}
+
+/* ============================================================
+   4. EL TÍTULO PRINCIPAL (h1)                 NIVEL: FÁCIL
+
+   Los títulos <h1> del HTML aparecen enormes y con un
+   degradado de colores, ¡sin cambiar el contenido!
+   PRUEBA:
+   - En 'font-size: clamp(38px, 6vw, 68px);' sustituye
+     SOLO '6vw' por '8vw' para intentar hacerlo más grande.
+     ('vw' depende del ancho de la pantalla; el título tiene
+     un mínimo de 38px y un máximo de 68px.)
+   - Cambia 'font-weight: 900;' por '700;' para reducir grosor.
+   NO TOCAR: 'background-clip' y 'color: transparent'.
+   Permiten que el degradado se vea dentro de las letras.
+   ============================================================ */
+h1 {
+    margin: 0 0 28px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ffffff, var(--azul), var(--violeta));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* DECORACIÓN EXTRA DEL TÍTULO (opcional):
+   h1::before dibuja una estrella ANTES de cada título h1.
+   Puedes cambiar SOLO el símbolo de 'content: '✦';' por
+   '★', '◆' o '♥' (manteniendo las comillas simples).
+   ¡Ese símbolo no está escrito en tu HTML! */
+h1::before {
+    content: '✦';
+    display: block;
+    margin-bottom: 12px;
+    color: var(--rosa);
+    -webkit-text-fill-color: var(--rosa);
+    font-size: 40px;
+    line-height: 1;
+}
+
+/* ============================================================
+   5. LOS SUBTÍTULOS (h2)                     NIVEL: FÁCIL
+
+   Añadimos una raya vertical de color a los títulos <h2>.
+   PRUEBA:
+   - 'font-size: 26px;' -> 34px para un subtítulo mayor.
+   - 'border-left: 5px ...' -> cambia SOLO 5px por 12px.
+     Así verás una barra más gruesa.
+   El color de la barra se controla con '--rosa' (bloque 1).
+   ============================================================ */
+h2 {
+    margin: 36px 0 18px;
+    padding-left: 16px;
+    color: #dcd6ff;
+    font-size: 26px;
+    border-left: 5px solid var(--rosa);
+}
+
+/* ============================================================
+   6. LOS PÁRRAFOS (p)                         NIVEL: FÁCIL
+
+   Cada <p> del HTML tendrá un suave fondo y esquinas redondas.
+   PRUEBA:
+   - 'padding: 13px 18px;' -> 'padding: 25px 18px;'
+     (el primer valor separa arriba/abajo, el otro a los lados).
+   - 'border-radius: 12px;' -> 30px para más redondeo.
+   Si no quieres modificar nada, se verá bien igualmente.
+   ============================================================ */
+p {
+    margin: 14px 0;
+    padding: 13px 18px;
+    background: #ffffff09;
+    border: 1px solid #ffffff12;
+    border-radius: 12px;
+}
+
+/* ============================================================
+   7. LOS ENLACES (a)                          NIVEL: FÁCIL
+
+   Los enlaces normales del HTML pasan a parecer BOTONES.
+   PRUEBA:
+   - 'padding: 9px 18px;' -> 'padding: 15px 26px;'
+     para crear botones más grandes.
+   - 'border-radius: 999px;' -> 8px para botones rectangulares.
+   - Los colores vienen de '--azul' y '--violeta' (bloque 1).
+   NO TOCAR: 'display' y 'transition'; sirven para que la
+   apariencia y la animación funcionen correctamente.
+   ============================================================ */
+a {
+    display: inline-block;
+    padding: 9px 18px;
+    color: #061325;
+    font-weight: 700;
+    text-decoration: none;
+    background: linear-gradient(100deg, var(--azul), var(--violeta));
+    border-radius: 999px;
+    box-shadow: 0 6px 20px #38bdf833;
+    transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+
+/* ============================================================
+   8. ANIMACIÓN DE LOS BOTONES                 NIVEL: CURIOSOS
+
+   'a:hover' significa: cuando pasas el ratón por un enlace.
+   PRUEBA:
+   - En 'translateY(-4px)' cambia SOLO -4px por -10px:
+     el botón se elevará más.
+   - En 'scale(1.04)' cambia SOLO 1.04 por 1.12:
+     el botón crecerá más al pasar el ratón.
+   NO TOCAR: el bloque 'a:focus-visible' justo debajo,
+   que ayuda a quienes navegan con el teclado.
+   ============================================================ */
+a:hover {
+    transform: translateY(-4px) scale(1.04);
+    filter: brightness(1.12);
+    box-shadow: 0 12px 30px #a78bfa66;
+}
+
+a:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+/* ============================================================
+   9. LAS IMÁGENES (img)                       NIVEL: FÁCIL
+
+   Afecta a TODAS las imágenes <img> que insertes en el HTML.
+   Se adaptan al ancho de la página, tienen borde y sombra.
+   PRUEBA:
+   - 'border: 3px ...' -> cambia SOLO 3px por 8px.
+   - 'border-radius: 22px;' -> 0px para esquinas cuadradas.
+   - En 'rotate(-1deg)' (más abajo) prueba 'rotate(3deg)'
+     para girar la imagen al pasar el ratón.
+   NO TOCAR: 'max-width: 100%;' y 'height: auto;'.
+   Evitan que la imagen se salga y se deforme.
+   ============================================================ */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 24px auto;
+    border: 3px solid var(--violeta);
+    border-radius: 22px;
+    box-shadow: 0 18px 42px #0008, 0 0 28px #a78bfa55;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+img:hover {
+    transform: scale(1.025) rotate(-1deg);
+    box-shadow: 0 24px 52px #0009, 0 0 45px #38bdf877;
+}
+
+/* ============================================================
+   10. EN PANTALLAS PEQUEÑAS                   NIVEL: AVANZADO
+
+   Este bloque se activa cuando la ventana mide 600px o menos:
+   adapta los márgenes y el espacio para móviles.
+   RECOMENDACIÓN: ¡no hace falta cambiar nada!
+   Prueba a estrechar la ventana del navegador para verlo.
+   ============================================================ */
+@media (max-width: 600px) {
+    body { width: calc(100% - 20px); margin: 10px auto; min-height: calc(100vh - 20px); padding: 22px; }
+    p { padding: 12px; }
+}
+
+/* ============================================================
+   11. ACCESIBILIDAD                           NO MODIFICAR
+
+   Si alguien ha pedido menos animaciones en su dispositivo,
+   respetamos esa preferencia para evitar movimientos molestos.
+   No necesitas entender este código todavía: déjalo tal cual.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+    a, img { transition: none; }
+    a:hover, img:hover { transform: none; }
+}

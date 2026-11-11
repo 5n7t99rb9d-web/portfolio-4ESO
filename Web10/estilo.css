@@ -1,0 +1,8 @@
+/* ELIGE UN DISEÑO CAMBIANDO SOLO EL NOMBRE DE AQUÍ:
+   estilo_neon.css    = oscuro y futurista
+   estilo_revista.css = creativo, tipo revista indie
+   estilo_comic.css   = colores vivos y aspecto cómic
+
+   Este archivo no es una copia del diseño: lo CARGA.
+   Todas las páginas HTML ya lo utilizan. */
+@import url("estilo_neon.css");

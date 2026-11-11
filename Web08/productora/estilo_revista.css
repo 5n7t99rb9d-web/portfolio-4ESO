@@ -1,0 +1,279 @@
+/* =============================================================
+   MI WEB 2.0 - ESTILO 2: REVISTA CREATIVA
+   UN DISEÑO CLARO, CÁLIDO Y ELEGANTE
+   =============================================================
+
+   ¿QUÉ HACE ESTE ARCHIVO?
+   Cambia el aspecto de los títulos (h1, h2), párrafos (p),
+   enlaces (a) e imágenes (img) de tu HTML.
+   NO necesitas cambiar el contenido de tus páginas.
+
+   PARA EMPEZAR:
+   1. Guarda este archivo en la misma carpeta que tus HTML.
+   2. En <head> escribe:
+      <link rel="stylesheet" href="estilo_revista.css">
+   3. Guarda y actualiza el navegador (F5 o Ctrl+R).
+   4. Si ya te gusta, ¡no tienes que tocar nada más!
+
+   SI QUIERES PERSONALIZAR:
+   - Cambia UN valor cada vez y observa lo que ocurre.
+   - Empieza por los colores del BLOQUE 1.
+   - No borres las llaves { }, los dos puntos : ni los ;
+   - Las explicaciones de este tipo son comentarios: no se ven.
+   - Puedes deshacer un cambio con Ctrl+Z.
+
+   PISTAS:
+   - color: cambia el color de las letras.
+   - background: cambia el fondo de un elemento.
+   - font-size: cambia el tamaño de la letra.
+   - px: píxeles; sirve para tamaños y distancias.
+   - h1: título principal. h2: subtítulo. p: párrafo.
+   - a: enlace. img: imagen. hover: al pasar el ratón.
+   - Puedes usar colores como red, gold o lightblue.
+   ============================================================= */
+
+/* =============================================================
+   1. PALETA DE COLORES                       NIVEL: MUY FÁCIL
+
+   Estos colores se reutilizan por toda la web.
+   CAMBIA SOLO el valor que aparece después de los dos puntos.
+
+   EJEMPLOS:
+   --papel: lightyellow;  (fondo amarillo claro)
+   --acento: purple;      (botones morados)
+   --titulo: darkblue;    (títulos azul oscuro)
+
+   Conserva el punto y coma final de cada línea.
+   ============================================================= */
+:root {
+    --fondo: #ede7dd;        /* Fondo exterior, beige claro */
+    --papel: #fffcf6;        /* Fondo de la página */
+    --titulo: #243831;       /* Verde oscuro de los títulos */
+    --texto: #374741;        /* Color del texto normal */
+    --acento: #b44731;       /* Color principal de los botones */
+    --detalle: #c9e4b4;      /* Verde suave para destacar */
+}
+
+/* =============================================================
+   2. EL FONDO EXTERIOR                       NIVEL: FÁCIL
+
+   Dibuja el fondo que rodea la página, con líneas diagonales.
+   PRUEBA: cambia --fondo en el BLOQUE 1.
+   NO TOCAR: repeating-linear-gradient crea las rayitas.
+   ============================================================= */
+html {
+    min-height: 100%;
+    background-color: var(--fondo);
+    background-image: repeating-linear-gradient(
+        135deg,
+        #ffffff30 0px,
+        #ffffff30 2px,
+        transparent 2px,
+        transparent 18px
+    );
+}
+
+/* =============================================================
+   3. LA HOJA CENTRAL (body)                  NIVEL: FÁCIL
+
+   Toda la web parece una hoja de revista o un cuaderno.
+   PRUEBA:
+   - max-width: 880px;  -> 680px  (hoja más estrecha)
+   - font-size: 18px;   -> 21px   (texto más grande)
+   - border-radius: 8px; -> 30px (esquinas muy redondeadas)
+   NO TOCAR: width, box-sizing y la parte de las sombras.
+   ============================================================= */
+body {
+    box-sizing: border-box;
+    width: calc(100% - 32px);
+    max-width: 880px;
+    min-height: calc(100vh - 64px);
+    margin: 32px auto;
+    padding: clamp(24px, 6vw, 64px);
+    background: var(--papel);
+    color: var(--texto);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.75;
+    border: 1px solid #d7cfc1;
+    border-radius: 8px;
+    box-shadow: 0 20px 65px #51483b2e;
+}
+
+/* =============================================================
+   4. EL TÍTULO PRINCIPAL (h1)                NIVEL: FÁCIL
+
+   Un título de revista: grande, con letras elegantes y una
+   línea decorativa debajo.
+   PRUEBA:
+   - font-size: clamp(42px, 7vw, 76px);
+     cambia SOLO 76px por 90px (tamaño máximo).
+   - border-bottom: 8px solid var(--detalle);
+     cambia SOLO 8px por 14px (raya más gruesa).
+   - Cambia --titulo y --detalle en el BLOQUE 1.
+   ============================================================= */
+h1 {
+    margin: 0 0 32px;
+    padding-bottom: 22px;
+    color: var(--titulo);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 800;
+    letter-spacing: -0.055em;
+    line-height: 1.07;
+    border-bottom: 8px solid var(--detalle);
+}
+
+/* DECORACIÓN opcional: pequeña etiqueta sobre el título.
+   PRUEBA: cambia SOLO el texto entre las comillas de content.
+   Por ejemplo: content: 'MI RINCÓN';
+   Para ocultarla, cambia display: block; por display: none; */
+h1::before {
+    content: '✷ MI RINCÓN DIGITAL';
+    display: block;
+    margin-bottom: 18px;
+    color: var(--acento);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+}
+
+/* =============================================================
+   5. LOS SUBTÍTULOS (h2)                     NIVEL: FÁCIL
+
+   Parecen secciones destacadas de una revista.
+   PRUEBA:
+   - font-size: 29px;   -> 35px (más grande)
+   - padding: 12px 18px; -> 20px 18px (más alto)
+   - Cambia --detalle en el BLOQUE 1.
+   ============================================================= */
+h2 {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 36px 0 18px;
+    padding: 12px 18px;
+    color: var(--titulo);
+    background: var(--detalle);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 29px;
+    line-height: 1.2;
+    border-radius: 5px;
+}
+
+/* =============================================================
+   6. LOS PÁRRAFOS (p)                        NIVEL: FÁCIL
+
+   Cada párrafo parece una pequeña nota sobre papel.
+   PRUEBA:
+   - padding: 16px 20px; -> 26px 20px (más espacio)
+   - border-radius: 6px; -> 25px (esquinas redondas)
+   - Si prefieres SIN recuadros, cambia SOLO:
+     background: #f3efe7; -> background: transparent;
+   ============================================================= */
+p {
+    margin: 16px 0;
+    padding: 16px 20px;
+    background: #f3efe7;
+    border-left: 4px solid #d6b7a6;
+    border-radius: 6px;
+}
+
+/* =============================================================
+   7. LOS ENLACES (a)                         NIVEL: FÁCIL
+
+   Los enlaces se convierten en botones de color teja.
+   PRUEBA:
+   - border-radius: 7px; -> 999px (botones tipo píldora)
+   - padding: 9px 17px;  -> 14px 24px (botones grandes)
+   - Cambia --acento en el BLOQUE 1.
+   NO TOCAR: display y transition.
+   ============================================================= */
+a {
+    display: inline-block;
+    margin: 3px;
+    padding: 9px 17px;
+    color: white;
+    background: var(--acento);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 7px;
+    box-shadow: 0 4px 0 #6e2a1d;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* =============================================================
+   8. EFECTO AL PASAR EL RATÓN                NIVEL: CURIOSOS
+
+   Al pasar el ratón los botones parecen presionarse.
+   PRUEBA: translateY(3px) -> translateY(6px).
+   Si no sabes qué significa, deja el bloque como está.
+   ============================================================= */
+a:hover {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #6e2a1d;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--titulo);
+    outline-offset: 4px;
+}
+
+/* =============================================================
+   9. LAS IMÁGENES (img)                      NIVEL: FÁCIL
+
+   Tus fotografías parecen impresas y pegadas a la página.
+   PRUEBA:
+   - border: 9px solid white; -> cambia 9px por 16px.
+   - rotate(1deg) -> rotate(-3deg) (imagen inclinada).
+   - Cambia border-radius: 3px; por 25px (redondeada).
+   NO TOCAR: max-width: 100% y height: auto.
+   ============================================================= */
+img {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    border: 9px solid white;
+    border-radius: 3px;
+    box-shadow: 0 11px 25px #3b392f35;
+    transform: rotate(1deg);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+img:hover {
+    transform: rotate(0deg) scale(1.035);
+    box-shadow: 0 15px 35px #3b392f55;
+}
+
+/* =============================================================
+   10. MÓVILES                                NO HACE FALTA TOCAR
+
+   Reduce márgenes y tamaños en pantallas pequeñas.
+   ============================================================= */
+@media (max-width: 600px) {
+    body { width: calc(100% - 20px); margin: 10px auto; min-height: calc(100vh - 20px); padding: 22px; }
+    h2 { font-size: 24px; }
+    p { padding: 14px; }
+}
+
+/* =============================================================
+   11. ACCESIBILIDAD                          NO MODIFICAR
+
+   Respeta a quienes han desactivado las animaciones.
+   ============================================================= */
+@media (prefers-reduced-motion: reduce) {
+    a, img { transition: none; }
+    a:hover { transform: none; }
+    img, img:hover { transform: none; }
+}
+
+/* ¿UN COLOR NO CAMBIA?
+   Puede estar escrito en tu HTML con style="color: red".
+   Puedes borrar ese style del HTML. Si necesitas forzar aquí
+   una propiedad concreta, existe !important, por ejemplo:
+   color: white !important;
+   No lo añadas por todas partes: solo si hace falta. */

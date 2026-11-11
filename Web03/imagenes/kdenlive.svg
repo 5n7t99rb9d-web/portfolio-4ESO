@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Ilustración provisional KDENLIVE">
+      <rect width="800" height="520" fill="#1d3257"/>
+      <circle cx="717" cy="47" r="172" fill="#7ad7ff" opacity=".13"/><circle cx="66" cy="455" r="190" fill="#f1a7e7" opacity=".12"/>
+      <g><rect x="92" y="86" width="591" height="323" rx="18" fill="#0e172b"/><rect x="115" y="111" width="353" height="195" rx="11" fill="#355b8e"/><rect x="126" y="120" width="332" height="175" rx="10" fill="#5076a9"/><circle cx="289" cy="204" r="42" fill="#ffffff" opacity=".83"/><path d="M279 180 L279 231 L315 205Z" fill="#1d3257"/><rect x="485" y="111" width="174" height="195" rx="9" fill="#24364f"/><rect x="116" y="323" width="543" height="22" rx="7" fill="#ff91ac"/><rect x="116" y="354" width="195" height="22" rx="7" fill="#72d7f1"/><rect x="320" y="354" width="339" height="22" rx="7" fill="#a99afe"/><line x1="390" y1="315" x2="390" y2="393" stroke="#ffeb8e" stroke-width="4"/></g>
+      <rect x="30" y="26" width="215" height="39" rx="19" fill="#7ad7ff"/>
+      <text x="48" y="52" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#1d3257">KDENLIVE</text>
+      <rect x="30" y="437" width="740" height="57" rx="12" fill="#050615" opacity=".62"/>
+      <text x="50" y="473" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#fff">TU VÍDEO · SUSTITUYE ESTA IMAGEN</text>
+    </svg>

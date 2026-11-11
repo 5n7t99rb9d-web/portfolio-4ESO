@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-label="Ilustración provisional PRODUCTORA">
+      <rect width="800" height="520" fill="#172554"/>
+      <circle cx="717" cy="47" r="172" fill="#5de1ff" opacity=".13"/><circle cx="66" cy="455" r="190" fill="#c7a1ff" opacity=".12"/>
+      <g><rect x="94" y="100" width="590" height="302" rx="27" fill="#ffffff" opacity=".12"/><rect x="123" y="136" width="532" height="244" rx="14" fill="#111b4c" stroke="#9eb9ff" stroke-width="3"/><circle cx="159" cy="160" r="8" fill="#ff8bac"/><circle cx="183" cy="160" r="8" fill="#ffdb8b"/><circle cx="207" cy="160" r="8" fill="#72dfc8"/><rect x="157" y="195" width="468" height="134" rx="14" fill="#1a387a"/><path d="M326 222 L326 308 L404 264Z" fill="#5de1ff"/><rect x="157" y="344" width="200" height="13" rx="6" fill="#818ddc"/></g>
+      <rect x="30" y="26" width="215" height="39" rx="19" fill="#5de1ff"/>
+      <text x="48" y="52" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#172554">PRODUCTORA</text>
+      <rect x="30" y="437" width="740" height="57" rx="12" fill="#050615" opacity=".62"/>
+      <text x="50" y="473" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#fff">TU WEB HTML · SUSTITUYE ESTA IMAGEN</text>
+    </svg>

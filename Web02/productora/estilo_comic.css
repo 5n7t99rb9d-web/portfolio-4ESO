@@ -1,0 +1,289 @@
+/* =============================================================
+   MI WEB 2.0 - ESTILO 3: CÓMIC POP
+   UN DISEÑO EXPLOSIVO, COLORIDO Y CON MUCHA PERSONALIDAD
+   =============================================================
+
+   ¿QUÉ HACE ESTE ARCHIVO?
+   Convierte tu HTML básico en una web de estilo cómic:
+   fondos con lunares, titulares gigantes y botones con sombra.
+   ¡No necesitas cambiar tus títulos ni tus enlaces!
+
+   PARA EMPEZAR:
+   1. Guarda este archivo junto a tus páginas HTML.
+   2. Dentro de <head> añade:
+      <link rel="stylesheet" href="estilo_comic.css">
+   3. Guarda y actualiza el navegador (F5 o Ctrl+R).
+   4. Puedes usarlo SIN CAMBIAR NADA.
+
+   PARA EXPERIMENTAR SIN ROMPERLO:
+   - Empieza por los colores del BLOQUE 1.
+   - Cambia un valor, guarda y observa el resultado.
+   - Conserva las llaves { }, los dos puntos : y los ;
+   - Si algo deja de funcionar, Ctrl+Z para deshacer.
+   - Este texto es un comentario, NO aparece en tu web.
+
+   DICCIONARIO RÁPIDO:
+   - background: fondo; color: color de letra.
+   - font-size: tamaño de letra; px: píxeles.
+   - border: borde; border-radius: esquinas redondas.
+   - h1, h2: títulos; p: párrafos; a: enlaces; img: fotos.
+   - hover: efecto al pasar el ratón.
+   - Puedes usar pink, yellow, cyan, black... sin #.
+   ============================================================= */
+
+/* =============================================================
+   1. LA PALETA DE COLORES                    NIVEL: MUY FÁCIL
+
+   Cambia SOLO lo que hay tras los dos puntos.
+   Pruebas fáciles:
+   --fondo: skyblue;     (fondo azul)
+   --amarillo: orange;   (titulares naranjas)
+   --rosa: purple;       (botones morados)
+   --verde: lime;        (párrafos verdes)
+
+   Si usas códigos como #ffe347, conserva el símbolo #.
+   ============================================================= */
+:root {
+    --fondo: #ffe347;         /* Amarillo del exterior */
+    --papel: #fffdf4;         /* Blanco crema de la página */
+    --amarillo: #ffed00;      /* Color de los títulos */
+    --rosa: #ff3f95;          /* Rosa de los enlaces */
+    --verde: #b3ff68;         /* Verde de los subtítulos */
+    --negro: #171717;         /* Color de bordes y texto */
+}
+
+/* =============================================================
+   2. EL FONDO CON LUNARES                    NIVEL: FÁCIL
+
+   El fondo amarillo lleva puntos oscuros creados con CSS.
+   PRUEBA: cambia --fondo en el BLOQUE 1.
+   NO TOCAR: radial-gradient ni background-size;
+   son los que dibujan y separan los puntos.
+   ============================================================= */
+html {
+    min-height: 100%;
+    background-color: var(--fondo);
+    background-image: radial-gradient(#17171740 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+}
+
+/* =============================================================
+   3. LA PÁGINA COMO VIÑETA (body)             NIVEL: FÁCIL
+
+   Una gran página blanca con borde negro y sombra desplazada.
+   PRUEBA:
+   - max-width: 930px; -> 750px (más estrecha)
+   - font-size: 18px; -> 22px (texto grande)
+   - border-radius: 16px; -> 0px (esquinas cuadradas)
+   NO TOCAR: width, box-sizing y las medidas con calc.
+   ============================================================= */
+body {
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+    max-width: 930px;
+    min-height: calc(100vh - 72px);
+    margin: 32px auto 40px;
+    padding: clamp(24px, 6vw, 56px);
+    background: var(--papel);
+    color: var(--negro);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    border: 4px solid var(--negro);
+    border-radius: 16px;
+    box-shadow: 13px 13px 0 var(--negro);
+}
+
+/* =============================================================
+   4. EL TÍTULO PRINCIPAL (h1)                NIVEL: FÁCIL
+
+   Titular de cómic: amarillo, letras negras y gran sombra.
+   PRUEBA:
+   - font-size: clamp(37px, 6vw, 70px);
+     cambia SOLO 70px por 85px para aumentar el máximo.
+   - padding: 24px; -> 35px (más espacio alrededor).
+   - Cambia --amarillo en el BLOQUE 1.
+   ============================================================= */
+h1 {
+    margin: 0 0 30px;
+    padding: 24px;
+    color: var(--negro);
+    background: var(--amarillo);
+    font-family: Impact, 'Arial Black', Arial, sans-serif;
+    font-size: clamp(37px, 6vw, 70px);
+    font-weight: 900;
+    line-height: 1.07;
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    border: 4px solid var(--negro);
+    border-radius: 8px;
+    box-shadow: 9px 9px 0 var(--rosa);
+}
+
+/* EXTRA: un pequeño bocadillo aparece antes del título.
+   PRUEBA: cambia el texto entre comillas por '¡HOLA!' o 'WOW'.
+   Para quitarlo, cambia display: inline-block por display: none.
+   El texto NO está escrito en el HTML. */
+h1::before {
+    content: '¡NUEVO!';
+    display: inline-block;
+    margin: 0 0 14px;
+    padding: 5px 12px;
+    color: white;
+    background: var(--rosa);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: .09em;
+    line-height: 1.4;
+    vertical-align: top;
+    border: 3px solid var(--negro);
+    transform: rotate(-4deg);
+}
+
+/* =============================================================
+   5. LOS SUBTÍTULOS (h2)                     NIVEL: FÁCIL
+
+   Bandas verdes con un borde negro grueso.
+   PRUEBA:
+   - font-size: 29px; -> 36px (más grande).
+   - border: 3px ... -> cambia SOLO 3px por 6px.
+   - Cambia --verde en el BLOQUE 1.
+   ============================================================= */
+h2 {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 36px 0 18px;
+    padding: 8px 18px;
+    color: var(--negro);
+    background: var(--verde);
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 29px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    border: 3px solid var(--negro);
+    box-shadow: 5px 5px 0 var(--negro);
+}
+
+/* =============================================================
+   6. LOS PÁRRAFOS (p)                        NIVEL: FÁCIL
+
+   Son como recuadros de texto de una historieta.
+   PRUEBA:
+   - padding: 16px 20px; -> 24px 20px.
+   - border-radius: 10px; -> 0px (estilo más cuadrado).
+   - background: white; -> background: lightcyan;
+   ============================================================= */
+p {
+    margin: 18px 0;
+    padding: 16px 20px;
+    background: white;
+    border: 3px solid var(--negro);
+    border-radius: 10px;
+    box-shadow: 5px 5px 0 #17171725;
+}
+
+/* =============================================================
+   7. ENLACES QUE PARECEN BOTONES (a)          NIVEL: FÁCIL
+
+   Botones fucsias de cómic.
+   PRUEBA:
+   - border-radius: 9px; -> 999px (redonditos).
+   - padding: 9px 17px; -> 14px 25px (más grandes).
+   - Cambia --rosa en el BLOQUE 1.
+   NO TOCAR: display y transition.
+   ============================================================= */
+a {
+    display: inline-block;
+    margin: 3px;
+    padding: 9px 17px;
+    color: var(--negro);
+    background: var(--rosa);
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: .94em;
+    font-weight: 900;
+    text-decoration: none;
+    border: 3px solid var(--negro);
+    border-radius: 9px;
+    box-shadow: 5px 5px 0 var(--negro);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    overflow-wrap: anywhere;
+}
+
+/* =============================================================
+   8. BOTONES INTERACTIVOS                    NIVEL: CURIOSOS
+
+   Cuando pasas el ratón, el botón parece hundirse.
+   PRUEBA: translate(4px, 4px) -> translate(2px, 2px).
+   NO TOCAR: a:focus-visible, útil para el teclado.
+   ============================================================= */
+a:hover {
+    background: var(--verde);
+    transform: translate(4px, 4px);
+    box-shadow: 1px 1px 0 var(--negro);
+}
+a:focus-visible {
+    outline: 3px dashed var(--negro);
+    outline-offset: 5px;
+}
+
+/* =============================================================
+   9. IMÁGENES CON MARCO DE CÓMIC (img)        NIVEL: FÁCIL
+
+   Borde negro, fondo amarillo y sombra de viñeta.
+   PRUEBA:
+   - border: 5px ... -> cambia SOLO 5px por 9px.
+   - border-radius: 8px; -> 30px para redondearlas.
+   - rotate(-2deg) -> rotate(2deg) para inclinarlas al otro lado.
+   NO TOCAR: max-width: 100% ni height: auto.
+   ============================================================= */
+img {
+    box-sizing: border-box;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 30px auto;
+    background: var(--amarillo);
+    border: 5px solid var(--negro);
+    border-radius: 8px;
+    box-shadow: 10px 10px 0 var(--rosa);
+    transform: rotate(-2deg);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+img:hover {
+    transform: rotate(0deg) scale(1.03);
+    box-shadow: 13px 13px 0 var(--verde);
+}
+
+/* =============================================================
+   10. PANTALLAS PEQUEÑAS                     NO HACE FALTA TOCAR
+
+   Adapta tamaños y márgenes para móviles y ventanas estrechas.
+   ============================================================= */
+@media (max-width: 600px) {
+    body { width: calc(100% - 22px); margin: 10px auto 20px; min-height: calc(100vh - 30px); padding: 20px; box-shadow: 7px 7px 0 var(--negro); }
+    h1 { padding: 16px; box-shadow: 5px 5px 0 var(--rosa); }
+    h2 { font-size: 23px; }
+    p { padding: 12px; }
+}
+
+/* =============================================================
+   11. ACCESIBILIDAD                          NO MODIFICAR
+
+   Respeta a las personas que prefieren menos animaciones.
+   ============================================================= */
+@media (prefers-reduced-motion: reduce) {
+    a, img { transition: none; }
+    a:hover { transform: none; }
+    img, img:hover { transform: none; }
+}
+
+/* ¿UN COLOR NO CAMBIA?
+   Es posible que lo hayas definido antes con style="color:..."
+   dentro de tu HTML. Puedes borrar ese style.
+   En casos puntuales, el CSS permite añadir !important:
+   color: white !important;
+   No hace falta usarlo si todos los colores ya cambian. */

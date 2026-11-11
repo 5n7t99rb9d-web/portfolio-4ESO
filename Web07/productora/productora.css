@@ -1,0 +1,7 @@
+/* CSS provisional para comprobar que la productora tiene su diseño independiente. */
+body {margin:0; color:#f6f6fc; background:#17182c; font: 18px/1.6 Arial, sans-serif;}
+header,main {max-width:850px; margin:auto; padding:34px 22px;}
+header {border-bottom:2px solid #fbba6a;}
+.marca {font-weight:bold; letter-spacing:.3em; color:#fbba6a;}
+h1 {font-size:clamp(2rem,6vw,3.5rem); line-height:1.1;}
+a {color:#fbba6a;}
